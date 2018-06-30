@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check Out Page</title>
+	<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css')}}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<br>
+	<h2 style="text-align: center; text-decoration: underline;">Check Out</h2>
+	<br>
+	<div class ="table-responsive">
+		{% if error %}
+		<p><strong style="color: #ff0000">{{ error }}</strong>
+		{% endif %}
+		<table class="table">
+			<thead>
+				<tr>
+					<th>BookName</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Amount</th>
+				</tr>
+			</thead>
+			<tbody>
+				{%for key,value in result.items() %}
+				<tr>
+					<td>{{key}}</td>
+					<td>{{ value[0] }}</td>
+					<td>{{ value[1] }}</td>
+					<td>{{ value[2] }}</td>
+				</tr>
+				{% endfor %}
+			<tfoot style="">
+				<th class="text-right" colspan="3">Total:&nbsp;{{ Total }}</th>
+			</tfoot>>
+			</tbody>
+		</table>
+		<form method="post" class="form-inline">
+			<div class="form-group" style="margin-left: 10%">
+		    	<label for="email">Email address:&nbsp;</label>
+		    	<input type="email" class="form-control" id="email" name="email">
+		  	</div>
+		  	<div class="form-group" style="margin-left: 10%;">
+		    	<label for="mobile">Mobile:&nbsp;</label>
+		    	<input type="text" class="form-control" id="mobile" name="mobile">
+		  	</div>
+		  	<button type="submit" class="btn btn-primary" style="margin-left: 10%;">Place Order</button>
+		</form>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+</script>>
+</html>

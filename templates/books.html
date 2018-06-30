@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css')}}">
+<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css')}}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+	<div class="row" style="">
+		<div class="col-lg-12">
+			<h1 style="text-align: center;padding-bottom: 4%;">Problem Solving Books</h1>
+			<div class="row">
+				<img id="status" src="https://image.flaticon.com/icons/svg/34/34627.svg" width="3%" height="4%" style="margin-bottom: 2.5%;"><p id="no.OfBooks" style="font-style: ;"> &nbsp;: </p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="" id="img">
+				</div>
+				<div class="col-md-6">
+					<h5 id="author" style="font-size: 150%;">author</h5>
+					<h5 id="price">price</h5>
+					<h5 id="publisher">publisher</h5>
+					<h5 id="year">year</h5>
+				</div>
+			<div class="row" id="button" style="display: flex;">
+				<div class="col-lg-12">
+					<br>
+					<button id="previous" type="button" class="btn btn-primary prev" onclick="prev()">Previous</button>
+					<button id="Next" type="button" class="btn btn-primary next" onclick="next()">Next</button>
+				</div>
+			</div>
+			<div class="row" style="">
+				<div class="col-lg-12" style="">
+					<button type='button' id="addingToCart" class='btn btn-primary addToCart' style='display: block; margin-bottom: 15%;margin-top: 5%;' onclick="addToCart()">AddToCart
+					</button>
+				<form method="post">
+					<button type='submit' id="" class='btn btn-primary' style='display: block; margin-bottom: 15%;margin-top: 3%';>check Out
+					</button></form>
+					<h6 style="margin-top: 10%;">Web Page Developed by Ravali and Raghavendra</h6>
+					<h6 style="">Emails: </h6>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="col-md-7">
+			<div class="row">
+				<div class="col-lg-12" style="">
+					<h4 id="booktitle" style="text-align: center;">Book Title</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12" style="">
+					<h6 id="Description" style="text-align: center;">Description</h6>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12" style="">
+				<a id="bookpreview"  style="text-align: center;" href="" target="_blank">bookpreview</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static',filename='booksRavali.js')}}"></script>
+<script type="text/javascript">
+	// function checkOut() {
+	// 	window.location.href='http://localhost:8082/checkOut';
+	// }
+</script>
+</html>

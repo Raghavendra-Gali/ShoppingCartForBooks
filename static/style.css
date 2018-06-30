@@ -1,0 +1,12 @@
+#button{
+	align-content: center;
+	padding-top: 10%;
+}
+.prev,.next{
+	margin-top: 12%;
+}
+
+body{
+	font-size: 100%;
+	font-style: oblique; 
+}
